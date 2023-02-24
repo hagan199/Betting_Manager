@@ -15,9 +15,16 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    'paths' => [
+        'api/*',
+        '/login',
+        '/logout',
+        '/sanctum/csrf-cookie',
+        'api/*', 'sanctum/csrf-cookie',
+    ],
 
     'allowed_methods' => ['*'],
+    'supports_credentials' => true,
 
     'allowed_origins' => ['*'],
 
@@ -32,3 +39,4 @@ return [
     'supports_credentials' => false,
 
 ];
+
