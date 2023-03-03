@@ -14,11 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// user controller routes
+Route::post("register", [UserController::class, "register"]);
+
+Route::post("login", [UserController::class, "login"]);
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::middleware('auth:sanctum')->group(function () {
+Route::middleware('auth:api')->group(function () {
     Route::get('/users', 'UserController@index');
     Route::post('/users', 'UserController@store');
     Route::get('/users/{id}', 'UserController@show');

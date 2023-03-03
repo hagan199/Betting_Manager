@@ -5,20 +5,15 @@
  */
 
 import './bootstrap';
-import '../sass/app.scss'
-import Router from '@/router'
-import { createApp } from 'vue/dist/vue.esm-bundler';
-import '../sass/app.scss'
-import store from '@/store'
+import { createApp } from 'vue';
+
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
  * registering components with the application instance so they are ready
  * to use in your application's views. An example is included for you.
  */
 
-const app = createApp({})
-app.use(Router)
-app.mount('#app')
+const app = createApp({});
 
 import ExampleComponent from './components/ExampleComponent.vue';
 app.component('example-component', ExampleComponent);
